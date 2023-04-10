@@ -1,0 +1,140 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.game-board{
+    height: 45px;
+     width: 45px;
+    font-size: 30px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.heading{
+    text-align: center;
+    color: crimson;
+    font-size: 50px;
+    margin-top: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid black;
+}
+
+.rules{
+    text-align: center;
+}
+
+.info-bar{
+    visibility: hidden;
+    height: 35px;
+    width: 35px;
+    margin-left: 48%;
+    animation: spin 0.5s infinite linear;
+}
+
+.show {
+    visibility: visible;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.game{
+    max-width: 295px;
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+
+
+.correct{
+    background-color: darkgreen;
+    color: white;
+}
+
+.close{
+    background-color: goldenrod;
+    color: white;
+}
+
+.wrong{
+    background-color: darkgrey;
+    color: white;
+}
+
+.invalid{
+    animation: flash 1s;
+}
+
+.win{
+    animation: rainbow 5s;
+}
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flash {
+    0%{
+        box-shadow: 0 4px 8px 0 red, 0 6px 20px 0 red;
+        border-color: crimson;
+    }
+
+    95%{
+
+        border-color: #ccc;
+    }
+    
+}
+
+@keyframes rainbow {
+    100%,
+    0% {
+      color: rgb(255, 0, 0);
+    }
+    8% {
+      color: rgb(255, 127, 0);
+    }
+    16% {
+      color: rgb(255, 255, 0);
+    }
+    25% {
+      color: rgb(127, 255, 0);
+    }
+    33% {
+      color: rgb(0, 255, 0);
+    }
+    41% {
+      color: rgb(0, 255, 127);
+    }
+    50% {
+      color: rgb(0, 255, 255);
+    }
+    58% {
+      color: rgb(0, 127, 255);
+    }
+    66% {
+      color: rgb(0, 0, 255);
+    }
+    75% {
+      color: rgb(127, 0, 255);
+    }
+    83% {
+      color: rgb(255, 0, 255);
+    }
+    91% {
+      color: rgb(255, 0, 127);
+    }
+}
